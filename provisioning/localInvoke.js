@@ -1,7 +1,7 @@
-var lambda = require('../lambda.js');
+import { handler } from '../bin/lambda'; 
 var mockEvent = require('./localEvent.json');
 
-lambda.handler(mockEvent, {
+handler(mockEvent, {
   succeed: function(result) {
     console.log('[SUCCEED] ', result);
   },

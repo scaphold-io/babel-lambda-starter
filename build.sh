@@ -1,8 +1,8 @@
 #!/bin/sh -e
 
 # install dependencies, run unit tests, and bundle all the files into a deployable zip file.
-if [ ! -f ./config.json ]; then
-    echo "Unable to build Lambda.zip! \"config.json\" is required!"
+if [ ! -f $1 ]; then
+    echo "Unable to build Lambda.zip! You must point to a valid \"config.json\"!"
     exit 1
 fi
 
