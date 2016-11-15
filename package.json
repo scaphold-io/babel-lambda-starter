@@ -1,0 +1,28 @@
+{
+  "name": "aws-lambda-starter",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "main": "./bin/lambda.js",
+  "scripts": {
+    "build": "./build.sh",
+    "create": "./provisioning/awsCreate.sh myLambda",
+    "deploy": "./provisioning/awsUpdate.sh myLambda",
+    "invoke": "./provisioning/awsInvoke.sh myLambda",
+    "localInvoke": "node ./provisioning/localInvoke.js",
+    "buildw": "babel src --out-dir bin/ -w --source-maps --sourceRoot src",
+    "test": "jasmine ./bin/**/*.js",
+    "test:watch": "watch jasmine ./bin/**/*.js"
+  },
+  "author": "Michael Paris",
+  "license": "Apache 2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-flowtype": "^2.25.0",
+    "proxyquire": "~1.7.2"
+  }
+}
